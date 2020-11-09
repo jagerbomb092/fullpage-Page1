@@ -5,6 +5,21 @@
 
 body {
   overflow: hidden; }
+  body::-webkit-scrollbar {
+    transition: all 0.8s ease-in-out; }
+  body::-webkit-scrollbar-track {
+    transition: all 0.8s ease-in-out; }
+  body::-webkit-scrollbar-thumb {
+    background: #5c4e4e; }
+  body.unhide {
+    overflow-y: scroll !important; }
+    body.unhide::-webkit-scrollbar {
+      width: 10px; }
+    body.unhide::-webkit-scrollbar-track {
+      width: 50px;
+      background: transparent; }
+    body.unhide::-webkit-scrollbar-thumb {
+      border-radius: 60px; }
 
 html {
   scroll-behavior: smooth; }
@@ -28,12 +43,6 @@ img {
 input:focus, textarea:focus {
   outline: none; }
 
-p {
-  line-height: 28px; }
-
-h1 {
-  line-height: 48px; }
-
 ul {
   display: block; }
 
@@ -45,7 +54,7 @@ ul {
   align-items: center; }
   .fullpage .section-1 {
     height: 100vh;
-    background-color: #192028;
+    background-color: #fff;
     position: absolute;
     top: 0;
     left: 0;
@@ -54,6 +63,23 @@ ul {
     transition: transform 1s cubic-bezier(0.55, 0.085, 0, 0.99); }
     .fullpage .section-1.hide {
       transform: translateY(-100%); }
+    .fullpage .section-1 .section-content {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      opacity: 0;
+      scale: 1.2;
+      color: #fff;
+      transition: all 1.5s ease-in-out; }
+      .fullpage .section-1 .section-content.active {
+        opacity: 1;
+        scale: 1; }
+      .fullpage .section-1 .section-content__intro {
+        font-family: 'Barlow Condensed', sans-serif;
+        font-weight: 300;
+        color: #2F2E2E;
+        letter-spacing: 3px; }
   .fullpage .section-2 {
     height: 100vh;
     background-color: #444480;
@@ -65,8 +91,24 @@ ul {
     transition: transform 1s cubic-bezier(0.55, 0.085, 0, 0.99); }
     .fullpage .section-2.hide {
       transform: translateY(-100%); }
+    .fullpage .section-2 .section-content {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      opacity: 0;
+      scale: 1.2;
+      color: #fff;
+      transition: all 1.5s ease-in-out; }
+      .fullpage .section-2 .section-content.active {
+        opacity: 1;
+        scale: 1; }
+      .fullpage .section-2 .section-content h1 {
+        font-family: 'Noto Sans JP', sans-serif;
+        font-weight: 300;
+        border: 1px solid; }
   .fullpage .section-3 {
-    height: 100vh;
+    height: 150vh;
     background-color: #1f1f57;
     position: absolute;
     top: 0;
@@ -76,6 +118,22 @@ ul {
     transition: transform 1s cubic-bezier(0.55, 0.085, 0, 0.99); }
     .fullpage .section-3.hide {
       transform: translateY(-100%); }
+    .fullpage .section-3 .section-content {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      opacity: 0;
+      scale: 1.2;
+      color: #fff;
+      transition: all 1.5s ease-in-out; }
+      .fullpage .section-3 .section-content.active {
+        opacity: 1;
+        scale: 1; }
+      .fullpage .section-3 .section-content h1 {
+        font-family: 'Noto Sans JP', sans-serif;
+        font-weight: 300;
+        border: 1px solid; }
   .fullpage .section-4 {
     height: 100vh;
     background-color: #7b7beb;
@@ -87,6 +145,22 @@ ul {
     transition: transform 1s cubic-bezier(0.55, 0.085, 0, 0.99); }
     .fullpage .section-4.hide {
       transform: translateY(-100%); }
+    .fullpage .section-4 .section-content {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      opacity: 0;
+      scale: 1.2;
+      color: #fff;
+      transition: all 1.5s ease-in-out; }
+      .fullpage .section-4 .section-content.active {
+        opacity: 1;
+        scale: 1; }
+      .fullpage .section-4 .section-content h1 {
+        font-family: 'Noto Sans JP', sans-serif;
+        font-weight: 300;
+        border: 1px solid; }
   .fullpage .section-5 {
     height: 100vh;
     background-color: #323275;
@@ -98,20 +172,24 @@ ul {
     transition: transform 1s cubic-bezier(0.55, 0.085, 0, 0.99); }
     .fullpage .section-5.hide {
       transform: translateY(-100%); }
-  .fullpage .section-content {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    opacity: 0;
-    scale: 1.2;
-    color: #fff;
-    transition: all 1.5s ease-in-out; }
-    .fullpage .section-content.active {
-      opacity: 1;
-      scale: 1; }
+    .fullpage .section-5 .section-content {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      opacity: 0;
+      scale: 1.2;
+      color: #fff;
+      transition: all 1.5s ease-in-out; }
+      .fullpage .section-5 .section-content.active {
+        opacity: 1;
+        scale: 1; }
+      .fullpage .section-5 .section-content h1 {
+        font-family: 'Noto Sans JP', sans-serif;
+        font-weight: 300;
+        border: 1px solid; }
   .fullpage .dot {
-    position: absolute;
+    position: fixed;
     height: 100vh;
     right: 10px;
     bottom: 0;
