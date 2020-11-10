@@ -2,14 +2,11 @@
     height: $height;
     width: 100%;
 }
-@mixin fontJP($kg:400) {
-    font-family: 'Noto Sans JP', sans-serif;
+@mixin fontMeri($kg:400) {
+    font-family: 'Montserrat', sans-serif;
     font-weight: $kg;
 }
-@mixin fontPlay($kg:400) {
-    font-family: 'Playfair Display', serif;
-    font-weight: $kg;
-}
+
 @mixin fontBar($kg:400) {
     font-family: 'Barlow Condensed', sans-serif;
     font-weight: $kg;

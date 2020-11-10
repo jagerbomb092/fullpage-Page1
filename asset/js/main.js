@@ -146,11 +146,13 @@ window.addEventListener("mousewheel",(e) => {
         
     }
     content[counter].addEventListener("transitionstart",()=>{
+        
         if (section[counter].clientHeight>window.innerHeight) {
             body.classList.add("unhide")
         } else {
             body.classList.remove("unhide")
         }
+        window.scrollTo({ top: 0, behavior: 'smooth' });
         e.stopImmediatePropagation()
         status=false
         return status =false
@@ -172,18 +174,23 @@ window.addEventListener("mousewheel",(e) => {
     let contentScroll = ()=>{
         if (section[counter].clientHeight>window.innerHeight) {
                 window.addEventListener("scroll",()=>{
-                    
-                    if (section[counter].scrollHeight-scrollY===section[counter].clientHeight) {
+                    console.log(section[counter].scrollHeight);
+                    console.log(section[counter].clientHeight);
+                    console.log(scrollY+window.innerHeight);
+                    if (section[counter].scrollHeight-scrollY==section[counter].clientHeight||scrollY==0) {
+                        
                         return status =true
+                        
                     } 
-                    else if(section[counter].scrollHeight-scrollY==window.innerHeight){
-                    
+                    else if(window.innerHeight+scrollY==section[counter].clientHeight||(window.innerHeight+scrollY)-0.25==section[counter].scrollHeight){
+                        
                         return status =true
                         
                     }
                     else{return status =false}
                     
                 })
+            
             } 
         else{
             return status =true
