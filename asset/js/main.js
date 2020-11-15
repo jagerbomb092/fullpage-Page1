@@ -4,6 +4,8 @@ let body = document.body
 let content = document.querySelectorAll(".section-content")
 let mainContent = document.querySelector(".fullPage")
 let sectionFirst=document.querySelector(".section-1")
+let sectionFourCT =document.querySelectorAll(".section-content__education")
+let sectionFour=document.querySelector(".section-4")
 let counter = 0
 let sectionLast = document.querySelector(".section-5")
 let status = true
@@ -80,13 +82,19 @@ var dotAct=()=>{
                 return counter,dotCount,contentCount
             }
         })
+        dot[i].addEventListener("transitionrun",()=>{
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        })
+        
     }
+    
 }
 dotAct()
 window.addEventListener("mousewheel",(e) => {
     
     let scrollContent = () => {
         if (e.deltaY > 0) {
+            
             if (counter < section.length - 1 && contentCount<content.length-1) {
                 dotCount+=1
                 contentCount+=1
@@ -122,6 +130,7 @@ window.addEventListener("mousewheel",(e) => {
             return counter,dotCount,contentCount
         }
         else {
+            
             if (counter > 0) {
                 content.forEach(contents => {
                     contents.classList.remove("active")
@@ -152,16 +161,12 @@ window.addEventListener("mousewheel",(e) => {
         } else {
             body.classList.remove("unhide")
         }
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        
         e.stopImmediatePropagation()
-        status=false
+        
         return status =false
     })
-    content[counter].addEventListener("transitionrun",()=>{
-        e.stopImmediatePropagation()
-        status=false
-        return status =false
-    })
+
     
     if (status) {
         
@@ -174,15 +179,15 @@ window.addEventListener("mousewheel",(e) => {
     let contentScroll = ()=>{
         if (section[counter].clientHeight>window.innerHeight) {
                 window.addEventListener("scroll",()=>{
+                    console.log(scrollY);
+                    console.log(window.innerHeight+scrollY);
                     console.log(section[counter].scrollHeight);
-                    console.log(section[counter].clientHeight);
-                    console.log(scrollY+window.innerHeight);
                     if (section[counter].scrollHeight-scrollY==section[counter].clientHeight||scrollY==0) {
                         
                         return status =true
                         
                     } 
-                    else if(window.innerHeight+scrollY==section[counter].clientHeight||(window.innerHeight+scrollY)-0.25==section[counter].scrollHeight){
+                    else if(window.innerHeight+scrollY==section[counter].clientHeight||(window.innerHeight+scrollY)-0.25==section[counter].scrollHeight||(window.innerHeight+scrollY)+0.25==section[counter].scrollHeight){
                         
                         return status =true
                         
@@ -203,4 +208,13 @@ window.addEventListener("mousewheel",(e) => {
     })
         
 })
+for (let i = 0; i < sectionFourCT.length; i++) {
+    sectionFourCT[i].addEventListener("mouseenter",()=>{
+        sectionFour.classList.add("bg-act")
+    })
+    sectionFourCT[i].addEventListener("mouseleave",()=>{
+        sectionFour.classList.remove("bg-act")
+    })
+    
+}
 

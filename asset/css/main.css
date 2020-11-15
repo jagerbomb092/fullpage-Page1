@@ -3,6 +3,10 @@
   padding: 0;
   box-sizing: border-box; }
 
+html, body {
+  width: 100%;
+  height: 100%; }
+
 body {
   overflow: hidden; }
   body::-webkit-scrollbar {
@@ -23,9 +27,6 @@ body {
 
 html {
   scroll-behavior: smooth; }
-
-ul, li {
-  list-style: none; }
 
 a {
   text-decoration: none;
@@ -54,7 +55,13 @@ ul {
   align-items: center; }
   .fullpage .section-1 {
     height: 100vh;
-    background-color: #fff;
+    background: #fff;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-attachment: fixed;
     position: absolute;
     top: 0;
     left: 0;
@@ -62,7 +69,6 @@ ul {
     z-index: 5;
     transition: transform 1s cubic-bezier(0.55, 0.085, 0, 0.99);
     width: 100%;
-    display: flex;
     align-items: center; }
     .fullpage .section-1.hide {
       transform: translateY(-100%); }
@@ -72,26 +78,48 @@ ul {
       opacity: 0;
       scale: 1.2;
       color: #fff;
-      transition: all 1.5s ease-in-out; }
+      transition: all 1.5s ease-in-out;
+      display: flex;
+      align-items: center; }
       .fullpage .section-1 .section-content.active {
         opacity: 1; }
       .fullpage .section-1 .section-content__image {
         height: 100%;
-        width: 100%;
-        background-position: center center;
+        margin: auto;
+        background: url("/asset/image/laptop_cup_glasses_plant_114948_1920x1080.png");
         background-repeat: no-repeat;
+        background-position: center right;
         background-size: cover;
-        background-attachment: fixed;
-        background-image: url(/asset/image/laptop_cup_glasses_plant_114948_1920x1080.jpg); }
+        position: relative;
+        z-index: -2; }
+        .fullpage .section-1 .section-content__image ::before {
+          content: "";
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          background: rgba(29, 28, 28, 0.445);
+          top: 0;
+          left: 0;
+          right: 0;
+          z-index: -1; }
+        .fullpage .section-1 .section-content__image .content__image-intro {
+          font-family: 'Elle Futura', sans-serif;
+          font-weight: 200;
+          color: #fff;
+          font-size: 30px;
+          width: 100%;
+          padding: 70px 0;
+          text-align: center; }
       .fullpage .section-1 .section-content__intro {
         font-family: 'Barlow Condensed', sans-serif;
         font-weight: 300;
         color: #2F2E2E;
         letter-spacing: 3px;
-        text-align: left;
+        text-align: center;
         display: block;
         margin-bottom: 30px;
-        font-size: 50px; }
+        font-size: 50px;
+        width: 100%; }
       .fullpage .section-1 .section-content__info {
         background-color: #2F2E2E;
         display: flex;
@@ -100,9 +128,10 @@ ul {
         width: 100%;
         height: 100%;
         flex-direction: column;
-        font-family: 'Elle futura';
+        font-family: 'Elle Futura', sans-serif;
+        font-weight: 300;
         font-weight: 400;
-        color: #ebdddd; }
+        color: #fff; }
         .fullpage .section-1 .section-content__info .content__info-img {
           width: 135px;
           height: 150px;
@@ -112,15 +141,18 @@ ul {
         .fullpage .section-1 .section-content__info .content__info-name {
           font-size: 26px;
           font-weight: 500;
-          margin-bottom: 10px; }
+          margin-bottom: 10px;
+          letter-spacing: 3px;
+          margin: 0 15px;
+          text-align: center; }
         .fullpage .section-1 .section-content__info .content__info-position {
           margin-bottom: 20px;
           font-size: 19px; }
         .fullpage .section-1 .section-content__info .content__info-section {
-          font-size: 15px;
+          font-size: 17px;
           margin-bottom: 10px; }
         .fullpage .section-1 .section-content__info .content__info-info {
-          font-size: 17px;
+          font-size: 20px;
           margin-bottom: 20px;
           text-align: center; }
         .fullpage .section-1 .section-content__info .content__info-icon {
@@ -138,12 +170,18 @@ ul {
           .fullpage .section-1 .section-content__info .content__info-icon i:nth-child(3) {
             cursor: pointer; }
       .fullpage .section-1 .section-content__direction {
-        margin-top: 20px;
+        margin-top: 30px;
         color: #2F2E2E;
         text-align: center;
         font-family: 'Barlow Condensed', sans-serif;
         font-weight: 500;
         font-size: 25px; }
+  @media screen and (max-width: 991px) {
+    .fullpage .section-1 .section-content__image {
+      display: none; } }
+  @media screen and (max-width: 767px) {
+    .fullpage .section-1 .section-content__intro {
+      font-size: 30px; } }
   .fullpage .section-2 {
     height: 100vh;
     background: url("/asset/image/7070699_orig.jpg") #2F2E2E repeat-y;
@@ -194,6 +232,12 @@ ul {
       .fullpage .section-2__intro:nth-child(9) {
         top: 320px;
         opacity: 0.2; }
+    .fullpage .section-2__img {
+      width: 300px;
+      height: 300px;
+      position: absolute;
+      top: 30px;
+      right: 30px; }
     .fullpage .section-2.hide {
       transform: translateY(-100%); }
     .fullpage .section-2 .section-content {
@@ -225,9 +269,21 @@ ul {
           font-family: 'Elle Futura';
           font-size: 18px;
           margin-bottom: 30px; }
+    @media screen and (max-width: 767px) {
+      .fullpage .section-2__intro {
+        font-size: 30px; }
+      .fullpage .section-2__img {
+        display: none; }
+      .fullpage .section-2 .section-content__center {
+        margin-top: 32px; }
+      .fullpage .section-2 .section-content .content__center-story {
+        margin-bottom: 15px; } }
   .fullpage .section-3 {
-    height: 150vh;
-    background-color: #1f1f57;
+    height: auto;
+    background: #2F2E2E;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
     position: absolute;
     top: 0;
     left: 0;
@@ -236,41 +292,209 @@ ul {
     transition: transform 1s cubic-bezier(0.55, 0.085, 0, 0.99); }
     .fullpage .section-3.hide {
       transform: translateY(-100%); }
+    .fullpage .section-3 .section-intro {
+      color: #fff;
+      letter-spacing: 3px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 600;
+      text-align: left;
+      display: block;
+      font-size: 100px;
+      position: absolute;
+      top: 50%;
+      bottom: 50%;
+      left: -150px;
+      transform: rotate(-90deg);
+      text-align: center;
+      opacity: 0.5; }
     .fullpage .section-3 .section-content {
       height: 100%;
       width: 100%;
-      display: flex;
-      justify-content: center;
       opacity: 0;
-      scale: 1.2;
       color: #fff;
       transition: all 1.5s ease-in-out; }
+      .fullpage .section-3 .section-content__title {
+        font-family: 'Barlow Condensed', sans-serif;
+        font-weight: 300;
+        font-size: 60px;
+        margin-bottom: 50px; }
+      .fullpage .section-3 .section-content__first {
+        background-image: linear-gradient(0deg, rgba(22, 21, 21, 0.466), rgba(36, 34, 34, 0.466)), url("/asset/image/Untitled-1.png");
+        height: auto;
+        width: 100%;
+        position: relative;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100%;
+        transition: all 0.3s ease-in-out; }
+        .fullpage .section-3 .section-content__first:hover {
+          background-size: 150%; }
+          .fullpage .section-3 .section-content__first:hover .content__icon-button {
+            background-color: #2f2e2e94;
+            color: #fff;
+            padding: 60px 0; }
+        .fullpage .section-3 .section-content__first .content__icon-button {
+          padding: 30px;
+          display: flex;
+          font-size: 20px;
+          color: #fff;
+          font-family: 'Elle Futura', sans-serif;
+          font-weight: 300;
+          align-items: center;
+          justify-content: center;
+          margin: auto;
+          transition: all 0.3s ease-in-out; }
+          .fullpage .section-3 .section-content__first .content__icon-button:hover {
+            background-color: rgba(255, 255, 255, 0.466);
+            border: 6px solid #2F2E2E;
+            color: #2F2E2E; }
+          .fullpage .section-3 .section-content__first .content__icon-button i {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px; }
+      .fullpage .section-3 .section-content__second {
+        background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.466), rgba(255, 255, 255, 0.466)), url("/asset/image/2.png");
+        height: auto;
+        width: 100%;
+        position: relative;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100%;
+        transition: all 0.3s ease-in-out; }
+        .fullpage .section-3 .section-content__second:hover {
+          background-size: 150%; }
+          .fullpage .section-3 .section-content__second:hover .content__icon-button {
+            background-color: #2f2e2e94;
+            color: #fff;
+            padding: 60px 0; }
+        .fullpage .section-3 .section-content__second .content__icon-button {
+          padding: 30px;
+          display: flex;
+          font-size: 20px;
+          color: #2F2E2E;
+          font-family: 'Elle Futura', sans-serif;
+          font-weight: 300;
+          align-items: center;
+          justify-content: center;
+          margin: auto;
+          transition: all 0.3s ease-in-out; }
+          .fullpage .section-3 .section-content__second .content__icon-button:hover {
+            background-color: rgba(255, 255, 255, 0.466);
+            border: 6px solid #2F2E2E;
+            color: #2F2E2E; }
+          .fullpage .section-3 .section-content__second .content__icon-button i {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px; }
+      .fullpage .section-3 .section-content .section-content__title .content__title-name {
+        margin-top: 20px;
+        font-size: 40px;
+        color: #fff; }
       .fullpage .section-3 .section-content.active {
-        opacity: 1;
-        scale: 1; }
+        opacity: 1; }
+    @media screen and (max-width: 767px) {
+      .fullpage .section-3 .section-intro {
+        display: none; } }
   .fullpage .section-4 {
     height: 100vh;
-    background-color: #7b7beb;
+    background: url("/asset/image/resume.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     z-index: 2;
     transition: transform 1s cubic-bezier(0.55, 0.085, 0, 0.99); }
+    .fullpage .section-4::before {
+      content: '';
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background: rgba(0, 0, 0, 0.4);
+      transition: all .5s;
+      z-index: -1; }
     .fullpage .section-4.hide {
       transform: translateY(-100%); }
+    .fullpage .section-4.bg-act::before {
+      opacity: 0.4; }
     .fullpage .section-4 .section-content {
       height: 100%;
       width: 100%;
-      display: flex;
-      justify-content: center;
       opacity: 0;
       scale: 1.2;
       color: #fff;
       transition: all 1.5s ease-in-out; }
+      .fullpage .section-4 .section-content .col-control {
+        margin-top: 100px; }
+        @media screen and (max-width: 991px) {
+          .fullpage .section-4 .section-content .col-control {
+            margin-top: 0; } }
       .fullpage .section-4 .section-content.active {
         opacity: 1;
         scale: 1; }
+      .fullpage .section-4 .section-content__education {
+        width: 100%;
+        background-color: rgba(228, 220, 220, 0.336);
+        padding: 30px;
+        transition: all 0.3s ease-in-out;
+        margin-bottom: 30px;
+        margin-top: 50px; }
+        .fullpage .section-4 .section-content__education .content__education-title {
+          letter-spacing: 6px;
+          color: #2F2E2E;
+          font-family: 'Barlow Condensed', sans-serif;
+          font-weight: 300;
+          font-size: 40px;
+          transform: translateY(-110%);
+          text-align: center; }
+        .fullpage .section-4 .section-content__education .content__education-info {
+          color: #2F2E2E;
+          font-family: 'Elle Futura', sans-serif;
+          font-weight: 300;
+          font-size: 25px;
+          margin-top: 15px; }
+        .fullpage .section-4 .section-content__education .content__education-list {
+          list-style: circle;
+          color: #2F2E2E;
+          font-family: 'Elle Futura', sans-serif;
+          font-weight: 300;
+          font-size: 18px;
+          margin-left: 30px; }
+        .fullpage .section-4 .section-content__education .content__skill-title {
+          letter-spacing: 6px;
+          color: #fff;
+          font-family: 'Barlow Condensed', sans-serif;
+          font-weight: 300;
+          font-size: 40px;
+          transform: translateY(-110%);
+          text-align: center; }
+        .fullpage .section-4 .section-content__education .content__skill-info {
+          color: #2F2E2E;
+          font-family: 'Elle Futura', sans-serif;
+          font-weight: 300;
+          font-size: 25px;
+          margin-top: 15px; }
+        .fullpage .section-4 .section-content__education .content__skill-list {
+          list-style: circle;
+          color: #2F2E2E;
+          font-family: 'Elle Futura', sans-serif;
+          font-weight: 300;
+          font-size: 18px;
+          margin-left: 30px; }
+        .fullpage .section-4 .section-content__education:hover {
+          background-color: rgba(77, 73, 73, 0.336);
+          color: #fff; }
+        .fullpage .section-4 .section-content__education:nth-child(1) {
+          margin-bottom: 30px; }
+        .fullpage .section-4 .section-content__education:nth-child(2) {
+          margin-top: 30px; }
+  @media screen and (max-width: 991px) {
+    .fullpage .section-4 {
+      height: auto; } }
   .fullpage .section-5 {
     height: 100vh;
     background-color: #323275;
@@ -378,6 +602,7 @@ ul {
     .fullpage .dot {
       background-color: transparent;
       transition: background 0.3s ease-in-out;
+      justify-content: center;
       height: auto; }
       .fullpage .dot::before {
         display: none; }
