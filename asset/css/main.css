@@ -388,6 +388,146 @@ ul {
             align-items: center;
             justify-content: center;
             margin-right: 10px; }
+      .fullpage .section-3 .section-content__third {
+        background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.466), rgba(255, 255, 255, 0.466)), url("/asset/image/project-mini.png");
+        height: auto;
+        width: 100%;
+        position: relative;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100%;
+        transition: all 0.3s ease-in-out; }
+        .fullpage .section-3 .section-content__third:hover {
+          background-size: 150%; }
+          .fullpage .section-3 .section-content__third:hover .content__icon-button {
+            background-color: #2f2e2e94;
+            color: #fff;
+            padding: 60px 0; }
+        .fullpage .section-3 .section-content__third .content__icon-button {
+          padding: 30px;
+          display: flex;
+          font-size: 20px;
+          color: #2F2E2E;
+          font-family: 'Elle Futura', sans-serif;
+          font-weight: 300;
+          align-items: center;
+          justify-content: center;
+          margin: auto;
+          transition: all 0.3s ease-in-out; }
+          .fullpage .section-3 .section-content__third .content__icon-button:hover {
+            background-color: rgba(255, 255, 255, 0.466);
+            border: 6px solid #2F2E2E;
+            color: #2F2E2E; }
+          .fullpage .section-3 .section-content__third .content__icon-button i {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px; }
+      .fullpage .section-3 .section-content__four {
+        background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.466), rgba(255, 255, 255, 0.466)), url("/asset/image/Untitled-2.png");
+        height: auto;
+        width: 100%;
+        position: relative;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100%;
+        transition: all 0.3s ease-in-out; }
+        .fullpage .section-3 .section-content__four:hover {
+          background-size: 150%; }
+          .fullpage .section-3 .section-content__four:hover .content__icon-button {
+            background-color: #2f2e2e94;
+            color: #fff;
+            padding: 60px 0; }
+        .fullpage .section-3 .section-content__four .content__icon-button {
+          padding: 30px;
+          display: flex;
+          font-size: 20px;
+          color: #2F2E2E;
+          font-family: 'Elle Futura', sans-serif;
+          font-weight: 300;
+          align-items: center;
+          justify-content: center;
+          margin: auto;
+          transition: all 0.3s ease-in-out; }
+          .fullpage .section-3 .section-content__four .content__icon-button:hover {
+            background-color: rgba(255, 255, 255, 0.466);
+            border: 6px solid #2F2E2E;
+            color: #2F2E2E; }
+          .fullpage .section-3 .section-content__four .content__icon-button i {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px; }
+      .fullpage .section-3 .section-content__five {
+        background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.466), rgba(255, 255, 255, 0.466)), url("/asset/image/unicode.png");
+        height: auto;
+        width: 100%;
+        position: relative;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100%;
+        transition: all 0.3s ease-in-out; }
+        .fullpage .section-3 .section-content__five:hover {
+          background-size: 150%; }
+          .fullpage .section-3 .section-content__five:hover .content__icon-button {
+            background-color: #2f2e2e94;
+            color: #fff;
+            padding: 60px 0; }
+        .fullpage .section-3 .section-content__five .content__icon-button {
+          padding: 30px;
+          display: flex;
+          font-size: 20px;
+          color: #2F2E2E;
+          font-family: 'Elle Futura', sans-serif;
+          font-weight: 300;
+          align-items: center;
+          justify-content: center;
+          margin: auto;
+          transition: all 0.3s ease-in-out; }
+          .fullpage .section-3 .section-content__five .content__icon-button:hover {
+            background-color: rgba(255, 255, 255, 0.466);
+            border: 6px solid #2F2E2E;
+            color: #2F2E2E; }
+          .fullpage .section-3 .section-content__five .content__icon-button i {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px; }
+      .fullpage .section-3 .section-content__six {
+        background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.466), rgba(255, 255, 255, 0.466)), url("/asset/image/team.png");
+        height: auto;
+        width: 100%;
+        position: relative;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100%;
+        transition: all 0.3s ease-in-out; }
+        .fullpage .section-3 .section-content__six:hover {
+          background-size: 150%; }
+          .fullpage .section-3 .section-content__six:hover .content__icon-button {
+            background-color: #2f2e2e94;
+            color: #fff;
+            padding: 60px 0; }
+        .fullpage .section-3 .section-content__six .content__icon-button {
+          padding: 30px;
+          display: flex;
+          font-size: 20px;
+          color: #2F2E2E;
+          font-family: 'Elle Futura', sans-serif;
+          font-weight: 300;
+          align-items: center;
+          justify-content: center;
+          margin: auto;
+          transition: all 0.3s ease-in-out; }
+          .fullpage .section-3 .section-content__six .content__icon-button:hover {
+            background-color: rgba(255, 255, 255, 0.466);
+            border: 6px solid #2F2E2E;
+            color: #2F2E2E; }
+          .fullpage .section-3 .section-content__six .content__icon-button i {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px; }
       .fullpage .section-3 .section-content .section-content__title .content__title-name {
         margin-top: 20px;
         font-size: 40px;
@@ -497,13 +637,16 @@ ul {
       height: auto; } }
   .fullpage .section-5 {
     height: 100vh;
-    background-color: #323275;
+    background: url("/asset/image/1 (1).jpg");
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     z-index: 1;
-    transition: transform 1s cubic-bezier(0.55, 0.085, 0, 0.99); }
+    transition: transform 1s cubic-bezier(0.55, 0.085, 0, 0.99);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; }
     .fullpage .section-5.hide {
       transform: translateY(-100%); }
     .fullpage .section-5 .section-content {

@@ -430,6 +430,174 @@
                     }
                 }
             }
+            &__third{
+                background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.466),rgba(255, 255, 255, 0.466)), url('/asset/image/project-mini.png');
+                
+                height: auto;
+                width: 100%;
+                position: relative;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: 100%;
+                transition: all 0.3s ease-in-out;
+                &:hover{
+                    
+                    background-size: 150%;
+                    & .content__icon-button{
+                        background-color: #2f2e2e94;
+                        color: #fff;
+                        padding: 60px 0;
+                    }
+                }
+                & .content__icon-button{
+                    padding: 30px;
+                    display: flex;
+                    font-size: 20px;
+                    color: $text-black;
+                    @include fontMeri(300);
+                    align-items: center;
+                    justify-content: center;
+                    margin: auto;
+                    transition: all 0.3s ease-in-out;
+                    &:hover{
+                        background-color: rgba(255, 255, 255, 0.466);
+                        border: 6px solid $text-black;
+                        color: $text-black;
+                    }
+                    & i{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin-right: 10px;
+                    }
+                }
+            }
+            &__four{
+                background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.466),rgba(255, 255, 255, 0.466)), url('/asset/image/Untitled-2.png');
+                
+                height: auto;
+                width: 100%;
+                position: relative;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: 100%;
+                transition: all 0.3s ease-in-out;
+                &:hover{
+                    
+                    background-size: 150%;
+                    & .content__icon-button{
+                        background-color: #2f2e2e94;
+                        color: #fff;
+                        padding: 60px 0;
+                    }
+                }
+                & .content__icon-button{
+                    padding: 30px;
+                    display: flex;
+                    font-size: 20px;
+                    color: $text-black;
+                    @include fontMeri(300);
+                    align-items: center;
+                    justify-content: center;
+                    margin: auto;
+                    transition: all 0.3s ease-in-out;
+                    &:hover{
+                        background-color: rgba(255, 255, 255, 0.466);
+                        border: 6px solid $text-black;
+                        color: $text-black;
+                    }
+                    & i{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin-right: 10px;
+                    }
+                }
+            }
+            &__five{
+                background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.466),rgba(255, 255, 255, 0.466)), url('/asset/image/unicode.png');
+                
+                height: auto;
+                width: 100%;
+                position: relative;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: 100%;
+                transition: all 0.3s ease-in-out;
+                &:hover{
+                    
+                    background-size: 150%;
+                    & .content__icon-button{
+                        background-color: #2f2e2e94;
+                        color: #fff;
+                        padding: 60px 0;
+                    }
+                }
+                & .content__icon-button{
+                    padding: 30px;
+                    display: flex;
+                    font-size: 20px;
+                    color: $text-black;
+                    @include fontMeri(300);
+                    align-items: center;
+                    justify-content: center;
+                    margin: auto;
+                    transition: all 0.3s ease-in-out;
+                    &:hover{
+                        background-color: rgba(255, 255, 255, 0.466);
+                        border: 6px solid $text-black;
+                        color: $text-black;
+                    }
+                    & i{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin-right: 10px;
+                    }
+                }
+            }
+            &__six{
+                background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.466),rgba(255, 255, 255, 0.466)), url('/asset/image/team.png');
+                
+                height: auto;
+                width: 100%;
+                position: relative;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: 100%;
+                transition: all 0.3s ease-in-out;
+                &:hover{
+                    
+                    background-size: 150%;
+                    & .content__icon-button{
+                        background-color: #2f2e2e94;
+                        color: #fff;
+                        padding: 60px 0;
+                    }
+                }
+                & .content__icon-button{
+                    padding: 30px;
+                    display: flex;
+                    font-size: 20px;
+                    color: $text-black;
+                    @include fontMeri(300);
+                    align-items: center;
+                    justify-content: center;
+                    margin: auto;
+                    transition: all 0.3s ease-in-out;
+                    &:hover{
+                        background-color: rgba(255, 255, 255, 0.466);
+                        border: 6px solid $text-black;
+                        color: $text-black;
+                    }
+                    & i{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin-right: 10px;
+                    }
+                }
+            }
             & .section-content__title{
                 & .content__title-name{
                     margin-top: 20px;
@@ -575,13 +743,16 @@
     
     & .section-5{
         height: 100vh;
-        background-color: rgb(50, 50, 117);
+        background:url('/asset/image/1\ \(1\).jpg');
         position:absolute;
         top: 0;
         left: 0;
         right: 0;
         z-index: 1;
         transition: transform 1s cubic-bezier(.55,.085,0,.99);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
         &.hide{
             transform: translateY(-100%);
         }
