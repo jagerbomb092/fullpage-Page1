@@ -103,7 +103,7 @@ ul {
           right: 0;
           z-index: -1; }
         .fullpage .section-1 .section-content__image .content__image-intro {
-          font-family: 'Elle Futura', sans-serif;
+          font-family: 'Poppins', sans-serif;
           font-weight: 200;
           color: #fff;
           font-size: 30px;
@@ -117,8 +117,8 @@ ul {
         letter-spacing: 3px;
         text-align: center;
         display: block;
-        margin-bottom: 30px;
-        font-size: 50px;
+        margin-bottom: 20px;
+        font-size: 30px;
         width: 100%; }
       .fullpage .section-1 .section-content__info {
         background-color: #2F2E2E;
@@ -128,7 +128,7 @@ ul {
         width: 100%;
         height: 100%;
         flex-direction: column;
-        font-family: 'Elle Futura', sans-serif;
+        font-family: 'Poppins', sans-serif;
         font-weight: 300;
         font-weight: 400;
         color: #fff; }
@@ -136,10 +136,10 @@ ul {
           width: 135px;
           height: 150px;
           border-radius: 100%;
-          margin-bottom: 25px;
+          margin-bottom: 20px;
           margin-top: 30px; }
         .fullpage .section-1 .section-content__info .content__info-name {
-          font-size: 26px;
+          font-size: 20px;
           font-weight: 500;
           margin-bottom: 10px;
           letter-spacing: 3px;
@@ -147,12 +147,12 @@ ul {
           text-align: center; }
         .fullpage .section-1 .section-content__info .content__info-position {
           margin-bottom: 20px;
-          font-size: 19px; }
+          font-size: 15px; }
         .fullpage .section-1 .section-content__info .content__info-section {
-          font-size: 17px;
+          font-size: 12px;
           margin-bottom: 10px; }
         .fullpage .section-1 .section-content__info .content__info-info {
-          font-size: 20px;
+          font-size: 15px;
           margin-bottom: 20px;
           text-align: center; }
         .fullpage .section-1 .section-content__info .content__info-icon {
@@ -160,7 +160,7 @@ ul {
           display: flex;
           justify-content: center;
           align-items: center;
-          margin-bottom: 30px; }
+          margin-bottom: 25px; }
           .fullpage .section-1 .section-content__info .content__info-icon i:nth-child(1) {
             margin-right: 20px;
             cursor: pointer; }
@@ -170,7 +170,7 @@ ul {
           .fullpage .section-1 .section-content__info .content__info-icon i:nth-child(3) {
             cursor: pointer; }
       .fullpage .section-1 .section-content__direction {
-        margin-top: 30px;
+        margin-top: 20px;
         color: #2F2E2E;
         text-align: center;
         font-family: 'Barlow Condensed', sans-serif;
@@ -202,7 +202,7 @@ ul {
       text-align: left;
       display: block;
       margin-bottom: 30px;
-      font-size: 50px;
+      font-size: 45px;
       position: absolute;
       top: 0;
       left: 30px; }
@@ -255,19 +255,19 @@ ul {
       .fullpage .section-2 .section-content__center {
         height: auto;
         background-color: #fff;
-        margin-top: 160px;
         opacity: 1;
         padding: 30px; }
         .fullpage .section-2 .section-content__center .content__center-title {
           font-family: 'Barlow Condensed', sans-serif;
           font-weight: 400;
           color: #2F2E2E;
-          font-size: 30px;
+          font-size: 25px;
           text-transform: uppercase;
           margin-bottom: 30px; }
         .fullpage .section-2 .section-content__center .content__center-story {
-          font-family: 'Elle Futura';
-          font-size: 18px;
+          font-family: 'Poppins', sans-serif;
+          font-weight: 300;
+          font-size: 15px;
           margin-bottom: 30px; }
     @media screen and (max-width: 767px) {
       .fullpage .section-2__intro {
@@ -315,8 +315,8 @@ ul {
       transition: all 1.5s ease-in-out; }
       .fullpage .section-3 .section-content__title {
         font-family: 'Barlow Condensed', sans-serif;
-        font-weight: 300;
-        font-size: 60px;
+        font-weight: 400;
+        font-size: 45px;
         margin-bottom: 50px; }
       .fullpage .section-3 .section-content__first {
         background-image: linear-gradient(0deg, rgba(22, 21, 21, 0.466), rgba(36, 34, 34, 0.466)), url("/asset/image/Untitled-1.png");
@@ -338,8 +338,8 @@ ul {
           display: flex;
           font-size: 20px;
           color: #fff;
-          font-family: 'Elle Futura', sans-serif;
-          font-weight: 300;
+          font-family: 'Poppins', sans-serif;
+          font-weight: 400;
           align-items: center;
           justify-content: center;
           margin: auto;
@@ -373,8 +373,8 @@ ul {
           display: flex;
           font-size: 20px;
           color: #2F2E2E;
-          font-family: 'Elle Futura', sans-serif;
-          font-weight: 300;
+          font-family: 'Poppins', sans-serif;
+          font-weight: 400;
           align-items: center;
           justify-content: center;
           margin: auto;
@@ -408,8 +408,8 @@ ul {
           display: flex;
           font-size: 20px;
           color: #2F2E2E;
-          font-family: 'Elle Futura', sans-serif;
-          font-weight: 300;
+          font-family: 'Poppins', sans-serif;
+          font-weight: 400;
           align-items: center;
           justify-content: center;
           margin: auto;
@@ -443,8 +443,8 @@ ul {
           display: flex;
           font-size: 20px;
           color: #2F2E2E;
-          font-family: 'Elle Futura', sans-serif;
-          font-weight: 300;
+          font-family: 'Poppins', sans-serif;
+          font-weight: 400;
           align-items: center;
           justify-content: center;
           margin: auto;
@@ -478,8 +478,8 @@ ul {
           display: flex;
           font-size: 20px;
           color: #2F2E2E;
-          font-family: 'Elle Futura', sans-serif;
-          font-weight: 300;
+          font-family: 'Poppins', sans-serif;
+          font-weight: 400;
           align-items: center;
           justify-content: center;
           margin: auto;
@@ -513,8 +513,8 @@ ul {
           display: flex;
           font-size: 20px;
           color: #2F2E2E;
-          font-family: 'Elle Futura', sans-serif;
-          font-weight: 300;
+          font-family: 'Poppins', sans-serif;
+          font-weight: 400;
           align-items: center;
           justify-content: center;
           margin: auto;
@@ -530,7 +530,7 @@ ul {
             margin-right: 10px; }
       .fullpage .section-3 .section-content .section-content__title .content__title-name {
         margin-top: 20px;
-        font-size: 40px;
+        font-size: 30px;
         color: #fff; }
       .fullpage .section-3 .section-content.active {
         opacity: 1; }
@@ -593,14 +593,14 @@ ul {
           text-align: center; }
         .fullpage .section-4 .section-content__education .content__education-info {
           color: #2F2E2E;
-          font-family: 'Elle Futura', sans-serif;
+          font-family: 'Poppins', sans-serif;
           font-weight: 300;
           font-size: 25px;
           margin-top: 15px; }
         .fullpage .section-4 .section-content__education .content__education-list {
           list-style: circle;
           color: #2F2E2E;
-          font-family: 'Elle Futura', sans-serif;
+          font-family: 'Poppins', sans-serif;
           font-weight: 300;
           font-size: 18px;
           margin-left: 30px; }
@@ -614,14 +614,14 @@ ul {
           text-align: center; }
         .fullpage .section-4 .section-content__education .content__skill-info {
           color: #2F2E2E;
-          font-family: 'Elle Futura', sans-serif;
+          font-family: 'Poppins', sans-serif;
           font-weight: 300;
           font-size: 25px;
           margin-top: 15px; }
         .fullpage .section-4 .section-content__education .content__skill-list {
           list-style: circle;
           color: #2F2E2E;
-          font-family: 'Elle Futura', sans-serif;
+          font-family: 'Poppins', sans-serif;
           font-weight: 300;
           font-size: 18px;
           margin-left: 30px; }
@@ -637,7 +637,7 @@ ul {
       height: auto; } }
   .fullpage .section-5 {
     height: 100vh;
-    background: url("/asset/image/1 (1).jpg");
+    background: linear-gradient(0deg, rgba(22, 21, 21, 0.664), rgba(36, 34, 34, 0.466)), url("/asset/image/marija-zaric-Fq3rAqfKy28-unsplash.jpg");
     position: absolute;
     top: 0;
     left: 0;
@@ -650,17 +650,69 @@ ul {
     .fullpage .section-5.hide {
       transform: translateY(-100%); }
     .fullpage .section-5 .section-content {
-      height: 100%;
+      height: auto;
       width: 100%;
-      display: flex;
-      justify-content: center;
       opacity: 0;
-      scale: 1.2;
       color: #fff;
-      transition: all 1.5s ease-in-out; }
+      transition: all 1.5s ease-in-out;
+      margin: auto; }
       .fullpage .section-5 .section-content.active {
-        opacity: 1;
-        scale: 1; }
+        opacity: 1; }
+      .fullpage .section-5 .section-content .section__title {
+        font-family: 'Barlow Condensed', sans-serif;
+        font-weight: 400;
+        letter-spacing: 6px;
+        font-size: 30px; }
+      .fullpage .section-5 .section-content .section__cap {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 300;
+        letter-spacing: 3px;
+        font-size: 30px; }
+      .fullpage .section-5 .section-content .section__info {
+        font-family: 'Barlow Condensed', sans-serif;
+        font-weight: 400;
+        font-size: 25px;
+        margin-bottom: 20px; }
+      .fullpage .section-5 .section-content .section__contact {
+        margin-top: 50px; }
+        .fullpage .section-5 .section-content .section__contact-email {
+          height: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          font-size: 30px;
+          width: 100%;
+          margin-bottom: 15px; }
+        .fullpage .section-5 .section-content .section__contact-content {
+          font-family: 'Barlow Condensed', sans-serif;
+          font-weight: 400;
+          font-size: 20px;
+          text-align: center;
+          width: 100%; }
+        .fullpage .section-5 .section-content .section__contact-phone {
+          height: 50%;
+          font-size: 30px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          width: 100%;
+          display: inline-block;
+          margin-bottom: 15px; }
+        .fullpage .section-5 .section-content .section__contact-info {
+          font-family: 'Barlow Condensed', sans-serif;
+          font-weight: 400;
+          font-size: 20px;
+          width: 100%;
+          text-align: center; }
+      .fullpage .section-5 .section-content .section__copyright {
+        margin-top: 50px;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 200;
+        font-size: 12px;
+        width: 100%;
+        text-align: center; }
   .fullpage .dot {
     position: fixed;
     height: 100vh;
@@ -697,11 +749,11 @@ ul {
         cursor: pointer;
         font-family: 'Barlow Condensed', sans-serif;
         font-weight: 500;
-        font-size: 18px;
+        font-size: 15px;
         text-align: center;
         color: #2F2E2E; }
         .fullpage .dot-center .dot-section.color-act {
-          font-size: 22px;
+          font-size: 19px;
           color: #ACACAC; }
     .fullpage .dot-icon {
       display: flex;

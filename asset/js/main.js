@@ -179,9 +179,7 @@ window.addEventListener("mousewheel",(e) => {
     let contentScroll = ()=>{
         if (section[counter].clientHeight>window.innerHeight) {
                 window.addEventListener("scroll",()=>{
-                    console.log(scrollY);
-                    console.log(window.innerHeight+scrollY);
-                    console.log(section[counter].scrollHeight);
+                    
                     if (section[counter].scrollHeight-scrollY==section[counter].clientHeight||scrollY==0) {
                         
                         return status =true

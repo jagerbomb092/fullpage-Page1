@@ -75,8 +75,8 @@
                 letter-spacing: 3px;
                 text-align: center;
                 display: block;
-                margin-bottom: 30px;
-                font-size: 50px;
+                margin-bottom: 20px;
+                font-size: 30px;
                 width: 100%;
                 
                 
@@ -98,12 +98,12 @@
                     width: 135px;
                     height: 150px;
                     border-radius: 100%;
-                    margin-bottom: 25px;
+                    margin-bottom: 20px;
                     margin-top: 30px;
 
                 }
                 & .content__info-name{
-                    font-size: 26px;
+                    font-size: 20px;
                     font-weight: 500;
                     margin-bottom: 10px;
                     letter-spacing: 3px;
@@ -112,15 +112,15 @@
                 }
                 & .content__info-position{
                     margin-bottom: 20px;
-                    font-size: 19px;
+                    font-size: 15px;
                 }
                 & .content__info-section{
-                    font-size: 17px;
+                    font-size: 12px;
                     margin-bottom: 10px;
                     
                 }
                 & .content__info-info{
-                    font-size: 20px;
+                    font-size: 15px;
                     margin-bottom: 20px;
                     text-align: center;
                 }
@@ -129,7 +129,7 @@
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    margin-bottom: 30px;
+                    margin-bottom: 25px;
                     & i:nth-child(1){
                         margin-right: 20px;
                         cursor: pointer;
@@ -144,7 +144,7 @@
                 }
             }
             &__direction{
-                margin-top: 30px;
+                margin-top: 20px;
                 color: $text-black;
                 text-align: center;
                 @include fontBar(500);
@@ -194,7 +194,7 @@
                 text-align: left;
                 display: block;
                 margin-bottom: 30px;
-                font-size: 50px;
+                font-size: 45px;
                 position: absolute;
                 top: 0;
                 left: 30px;
@@ -266,20 +266,18 @@
             &__center{
                 height: auto;
                 background-color: #fff;
-                
-                margin-top: 160px;
                 opacity: 1;
                 padding: 30px;
                 & .content__center-title{
                     @include fontBar(400);
                     color: $text-black;
-                    font-size: 30px;
+                    font-size: 25px;
                     text-transform: uppercase;
                     margin-bottom: 30px;
                 }
                 & .content__center-story{
-                    font-family: 'Elle Futura';
-                    font-size: 18px;
+                    @include fontMeri(300);
+                    font-size: 15px;
                     margin-bottom: 30px;
                 }
             }
@@ -341,8 +339,8 @@
             color: #fff;
             transition: all 1.5s ease-in-out;
             &__title{
-                @include fontBar(300);
-                font-size:60px;
+                @include fontBar(400);
+                font-size:45px;
                 margin-bottom: 50px;
             }
             &__first{
@@ -369,7 +367,7 @@
                     display: flex;
                     font-size: 20px;
                     color: #fff;
-                    @include fontMeri(300);
+                    @include fontMeri(400);
                     align-items: center;
                     justify-content: center;
                     margin: auto;
@@ -412,7 +410,7 @@
                     display: flex;
                     font-size: 20px;
                     color: $text-black;
-                    @include fontMeri(300);
+                    @include fontMeri(400);
                     align-items: center;
                     justify-content: center;
                     margin: auto;
@@ -454,7 +452,7 @@
                     display: flex;
                     font-size: 20px;
                     color: $text-black;
-                    @include fontMeri(300);
+                    @include fontMeri(400);
                     align-items: center;
                     justify-content: center;
                     margin: auto;
@@ -496,7 +494,7 @@
                     display: flex;
                     font-size: 20px;
                     color: $text-black;
-                    @include fontMeri(300);
+                    @include fontMeri(400);
                     align-items: center;
                     justify-content: center;
                     margin: auto;
@@ -538,7 +536,7 @@
                     display: flex;
                     font-size: 20px;
                     color: $text-black;
-                    @include fontMeri(300);
+                    @include fontMeri(400);
                     align-items: center;
                     justify-content: center;
                     margin: auto;
@@ -580,7 +578,7 @@
                     display: flex;
                     font-size: 20px;
                     color: $text-black;
-                    @include fontMeri(300);
+                    @include fontMeri(400);
                     align-items: center;
                     justify-content: center;
                     margin: auto;
@@ -601,7 +599,7 @@
             & .section-content__title{
                 & .content__title-name{
                     margin-top: 20px;
-                    font-size: 40px;
+                    font-size: 30px;
                     color: #fff;
                 }
             }
@@ -743,7 +741,7 @@
     
     & .section-5{
         height: 100vh;
-        background:url('/asset/image/1\ \(1\).jpg');
+        background:linear-gradient(0deg, rgba(22, 21, 21, 0.664),rgba(36, 34, 34, 0.466)),url('/asset/image/marija-zaric-Fq3rAqfKy28-unsplash.jpg');
         position:absolute;
         top: 0;
         left: 0;
@@ -757,21 +755,74 @@
             transform: translateY(-100%);
         }
         & .section-content{
-            height: 100%;
+            height: auto;
             width: 100%;
-            display: flex;
-           justify-content: center;
             opacity: 0;
-            scale: 1.2;
             color: #fff;
             transition: all 1.5s ease-in-out;
-            
+            margin: auto;
             &.active{
                 opacity: 1;
-                scale: 1;
             }
-           
-            
+           & .section__title{
+               @include fontBar(400);
+               letter-spacing:6px;
+               font-size: 30px;
+           }
+           & .section__cap{
+               @include fontMeri(300);
+               letter-spacing:3px;
+               font-size: 30px;
+           }
+           & .section__info{
+            @include fontBar(400);
+            font-size: 25px;
+            margin-bottom: 20px;
+           }
+           & .section__contact{
+               margin-top: 50px;
+               &-email{
+                height: 50%;
+                display: flex;
+                    justify-content: center;
+                    align-items: center;
+                text-align: center;
+                font-size: 30px;
+                
+                width: 100%;
+                margin-bottom: 15px;
+               }
+               &-content{
+                    @include fontBar(400);
+                    font-size: 20px;
+                    text-align: center;
+                    width: 100%;
+               }
+               &-phone{
+                    height: 50%;
+                    font-size: 30px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+                    width: 100%;
+                    display: inline-block;
+                    margin-bottom: 15px;
+               }
+               &-info{
+                @include fontBar(400);
+                font-size: 20px;
+                width: 100%;
+                text-align: center;
+               }
+           }
+           & .section__copyright{
+               margin-top: 50px;
+               @include fontMeri(200);
+               font-size: 12px;
+               width: 100%;
+               text-align: center;
+           }
         }
     }
     
@@ -811,11 +862,11 @@
                 transition: all .3s ease;
                 cursor: pointer;
                 @include fontBar(500);
-                font-size: 18px;
+                font-size: 15px;
                 text-align: center;
                 color: $text-black;
                 &.color-act{
-                    font-size: 22px;
+                    font-size: 19px;
                     color: #ACACAC;
                 }
             }
