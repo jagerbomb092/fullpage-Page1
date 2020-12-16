@@ -1,4 +1,18 @@
-
+.progress-bar{
+    position:fixed;
+    height: 100%;
+    width: 10px;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: red;
+    z-index: 9999;
+    & .body-progress{
+        height: 0;
+        width: 100%;
+        
+    }
+}
 .fullpage{
     @include height(100%);
     position: relative;
@@ -95,7 +109,7 @@
                 
                 
                 & .content__info-img{
-                    width: 135px;
+                    width: 145px;
                     height: 150px;
                     border-radius: 100%;
                     margin-bottom: 20px;
@@ -352,7 +366,8 @@
                 background-repeat: no-repeat;
                 background-position: center;
                 background-size: 100%;
-                transition: all 0.3s ease-in-out;
+                // transition: all 0.3s ease-in-out;
+                transition-duration: 0.5s;
                 &:hover{
                     
                     background-size: 150%;
@@ -829,7 +844,7 @@
     .dot{
         position: fixed;
         height: 100vh;
-        right: 0;
+        right: 10px;
         bottom: 0;
         top: 0;
         background-color: #fff;

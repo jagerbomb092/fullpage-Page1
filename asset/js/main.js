@@ -12,6 +12,8 @@ let status = true
 let contentCount = 0
 let dotCount = 0
 
+let startPoint = document.body.getBoundingClientRect().top
+let progress = document.querySelector('.body-progress')
 content[0].classList.add("active")
 dot[0].classList.add("color-act")
 var dotAct=()=>{
@@ -36,7 +38,7 @@ var dotAct=()=>{
                     });
                     dot[dotCount].classList.add("color-act")
                     counter=i
-                    return counter,dotCount,contentCount
+                    counter,dotCount,contentCount
                 }
                 else {
                     counter=i-1
@@ -59,7 +61,7 @@ var dotAct=()=>{
                     });
                     dot[dotCount].classList.add("color-act")
                     counter=i
-                    return counter,dotCount,contentCount
+                    
                 }
             }
             else{
@@ -79,7 +81,7 @@ var dotAct=()=>{
                 });
                 dot[dotCount].classList.add("color-act")
                
-                return counter,dotCount,contentCount
+                
             }
         })
         dot[i].addEventListener("transitionrun",()=>{
@@ -90,129 +92,129 @@ var dotAct=()=>{
     
 }
 dotAct()
-window.addEventListener("mousewheel",(e) => {
-    
-    let scrollContent = () => {
-        if (e.deltaY > 0) {
-            
-            if (counter < section.length - 1 && contentCount<content.length-1) {
-                dotCount+=1
-                contentCount+=1
-                section[counter].classList.add("hide")
-                content.forEach(contents => {
-                    contents.classList.remove("active")
-                });
-                content[contentCount].classList.add("active")
-                dot.forEach(dots => {
-                    dots.classList.remove("color-act")
-                    
-                });
-                dot[dotCount].classList.add("color-act")
-                counter += 1
-                
-            } else {
-                if (section[counter] === sectionLast) {
-                    for (let i = 0; i < section.length; i++) {
-                        section[i].classList.remove("hide")
-                    }
-                    for (let i = 0; i < content.length; i++) {
-                        content[i].classList.remove("active")
-                        dot[i].classList.remove("color-act")
-                    }
-                }
-                dot[0].classList.add("color-act")
-                content[0].classList.add("active")
-                return counter = 0,
-                contentCount=0,
-                dotCount=0
-                
-            }
-            return counter,dotCount,contentCount
-        }
-        else {
-            
-            if (counter > 0) {
-                content.forEach(contents => {
-                    contents.classList.remove("active")
-                });
-                dot.forEach(dots => {
-                    dots.classList.remove("color-act")
-                });
-                dotCount-=1
-                contentCount-=1
-                counter -= 1
-                content[counter].classList.add("active")
-                section[counter].classList.remove("hide")
-                dot[counter].classList.add("color-act")
-                
-            } 
-            else{
-                return counter = 0,
-                contentCount=0,
-                dotCount=0
-            }
-        }
-        
-    }
-    content[counter].addEventListener("transitionstart",()=>{
-        
-        if (section[counter].clientHeight>window.innerHeight) {
-            body.classList.add("unhide")
-        } else {
-            body.classList.remove("unhide")
-        }
-        
-        e.stopImmediatePropagation()
-        
-        return status =false
-    })
 
-    
-    if (status) {
+window.addEventListener("mousewheel",(e) => {
+    if (status===true) {
+        scrollContent(e)
+    }
+    else if(status===false){
+        return 
+    }
+})
+function xyz(){
+    if (section[counter].scrollHeight>window.innerHeight) {
+        body.classList.add("unhide")
         
-        scrollContent()
+    } else {
+        body.classList.remove("unhide")
     }
+    status =false
+    console.log(status);
+}
+for (let i = 0; i < content.length; i++) {
+    let sections = content[i];
+    sections.addEventListener("transitionstart",xyz)
+}
+
+let contentScroll = ()=>{
+    if (section[counter].clientHeight>window.innerHeight) {
+        window.addEventListener("scroll",abc)
+    } 
     else{
-        e.stopImmediatePropagation()
-        return false
+        status=true
     }
-    let contentScroll = ()=>{
-        if (section[counter].clientHeight>window.innerHeight) {
-                window.addEventListener("scroll",()=>{
-                    
-                    if (section[counter].scrollHeight-scrollY==section[counter].clientHeight||scrollY==0) {
-                        
-                        return status =true
-                        
-                    } 
-                    else if(window.innerHeight+scrollY==section[counter].clientHeight||(window.innerHeight+scrollY)-0.25==section[counter].scrollHeight||(window.innerHeight+scrollY)+0.25==section[counter].scrollHeight){
-                        
-                        return status =true
-                        
-                    }
-                    else{return status =false}
-                    
-                })
+    console.log(status);
+}
+function abc(){
+    if (section[counter].scrollHeight-scrollY==section[counter].clientHeight||scrollY==0) {
+            status=true
+        // console.log(status);
+   } 
+   else if(window.innerHeight+scrollY==section[counter].clientHeight||(window.innerHeight+scrollY)-0.25==section[counter].scrollHeight||(window.innerHeight+scrollY)+0.25==section[counter].scrollHeight){
+        status=true
+   }
+   else{status=false}
+   console.log(status);
+}
+for (let i = 0; i < content.length; i++){
+    let sections = content[i];
+    sections.addEventListener("transitionend",contentScroll)
+}
+
+let scrollContent = (e) => {
+    if (e.deltaY > 0) {
+        
+        if (counter < section.length - 1 && contentCount<content.length-1) {
+            dotCount+=1
+            contentCount+=1
+            section[counter].classList.add("hide")
+            content.forEach(contents => {
+                contents.classList.remove("active")
+            });
+            content[contentCount].classList.add("active")
+            dot.forEach(dots => {
+                dots.classList.remove("color-act")
+                
+            });
+            dot[dotCount].classList.add("color-act")
+            counter += 1
             
-            } 
+        } else {
+            if (section[counter] === sectionLast) {
+                section.forEach(sections=>sections.classList.remove("hide"))
+                for (let i = 0; i < content.length; i++) {
+                    content[i].classList.remove("active")
+                    dot[i].classList.remove("color-act")
+                }
+            }
+            dot[0].classList.add("color-act")
+            content[0].classList.add("active")
+            counter = 0
+            contentCount=0
+            dotCount=0
+            
+        }
+        
+    }
+    else {
+        
+        if (counter > 0) {
+            content.forEach(contents => {
+                contents.classList.remove("active")
+            });
+            dot.forEach(dots => {
+                dots.classList.remove("color-act")
+            });
+            dotCount-=1
+            contentCount-=1
+            counter -= 1
+            content[counter].classList.add("active")
+            section[counter].classList.remove("hide")
+            dot[counter].classList.add("color-act")
+            
+        } 
         else{
-            return status =true
+            counter = 0,
+            contentCount=0,
+            dotCount=0
         }
     }
     
-    content[counter].addEventListener("transitionend",()=>{
-        contentScroll()
-        
-    })
-        
-})
+}
 for (let i = 0; i < sectionFourCT.length; i++) {
     sectionFourCT[i].addEventListener("mouseenter",()=>{
         sectionFour.classList.add("bg-act")
     })
     sectionFourCT[i].addEventListener("mouseleave",()=>{
-        sectionFour.classList.remove("bg-act")
+        sectionFour.classList.remove("bg-act") 
     })
     
 }
 
+
+// function customScroll() {
+//     let height = window.innerHeight+scrollY;
+//     let scrolled = (startPoint / height) * 100;
+//     progress.style.height = scrolled + "%";
+//   }
+// window.addEventListener('scroll',customScroll)
