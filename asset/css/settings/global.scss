@@ -3,24 +3,24 @@
     padding: 0;
     box-sizing: border-box;
 }
-html,body
-{
-    width: 100%;
-    height: 100%;}
+
 body{
     overflow: hidden;
-    ::-webkit-scrollbar {
+    &::-webkit-scrollbar {
         width: 10px;
+        display: none;
       }
       
       /* Track */
-      ::-webkit-scrollbar-track {
-        background: #f1f1f1; 
+      &::-webkit-scrollbar-track {
+        
+        display: none;
       }
        
       /* Handle */
-      ::-webkit-scrollbar-thumb {
-        background: #888; 
+      &::-webkit-scrollbar-thumb {
+        
+        display: none;
       }
     &.unhide{
         overflow-y: scroll !important;

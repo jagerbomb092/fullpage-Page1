@@ -5,13 +5,22 @@
     right: 0;
     top: 0;
     bottom: 0;
-    background-color: red;
+    background-color: #fff;
     z-index: 9999;
     & .body-progress{
         height: 0;
         width: 100%;
-        
+        background-color:$text-black;
+        transition: all 1s cubic-bezier(.55,.085,0,.99);
     }
+}
+.cursor{
+    height: 50px;
+    width: 50px;
+    border: 5px solid $text-black;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1050;
 }
 .fullpage{
     @include height(100%);
@@ -643,7 +652,8 @@
         right: 0;
         z-index: 2;
         transition: transform 1s cubic-bezier(.55,.085,0,.99);
-        
+        display: flex;
+        align-items: center;
         &::before{
             content: '';
             width: 100%;
@@ -796,6 +806,11 @@
            }
            & .section__contact{
                margin-top: 50px;
+               @media screen and (max-width:991px){
+                   & .row-control{
+                       margin-top: 30px;
+                   }
+               }
                &-email{
                 height: 50%;
                 display: flex;

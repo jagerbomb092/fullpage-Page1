@@ -3,20 +3,17 @@
   padding: 0;
   box-sizing: border-box; }
 
-html, body {
-  width: 100%;
-  height: 100%; }
-
 body {
   overflow: hidden;
   /* Track */
   /* Handle */ }
-  body ::-webkit-scrollbar {
-    width: 10px; }
-  body ::-webkit-scrollbar-track {
-    background: #f1f1f1; }
-  body ::-webkit-scrollbar-thumb {
-    background: #888; }
+  body::-webkit-scrollbar {
+    width: 10px;
+    display: none; }
+  body::-webkit-scrollbar-track {
+    display: none; }
+  body::-webkit-scrollbar-thumb {
+    display: none; }
   body.unhide {
     overflow-y: scroll !important; }
 
@@ -49,11 +46,21 @@ ul {
   right: 0;
   top: 0;
   bottom: 0;
-  background-color: red;
+  background-color: #fff;
   z-index: 9999; }
   .progress-bar .body-progress {
     height: 0;
-    width: 100%; }
+    width: 100%;
+    background-color: #2F2E2E;
+    transition: all 1s cubic-bezier(0.55, 0.085, 0, 0.99); }
+
+.cursor {
+  height: 50px;
+  width: 50px;
+  border: 5px solid #2F2E2E;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 1050; }
 
 .fullpage {
   height: 100%;
@@ -556,7 +563,9 @@ ul {
     left: 0;
     right: 0;
     z-index: 2;
-    transition: transform 1s cubic-bezier(0.55, 0.085, 0, 0.99); }
+    transition: transform 1s cubic-bezier(0.55, 0.085, 0, 0.99);
+    display: flex;
+    align-items: center; }
     .fullpage .section-4::before {
       content: '';
       width: 100%;
@@ -683,6 +692,9 @@ ul {
         margin-bottom: 20px; }
       .fullpage .section-5 .section-content .section__contact {
         margin-top: 50px; }
+        @media screen and (max-width: 991px) {
+          .fullpage .section-5 .section-content .section__contact .row-control {
+            margin-top: 30px; } }
         .fullpage .section-5 .section-content .section__contact-email {
           height: 50%;
           display: flex;
